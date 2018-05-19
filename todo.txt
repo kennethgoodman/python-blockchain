@@ -1,0 +1,40 @@
+Need to:
+
+1. Cryptography
+	Basic ECC to sign and send transactions <- included in Script
+	Schnorr Signatures - Aggregated Signatures
+	Zero-Knowledge Proofs
+	Ring Signatures
+	Bullet Proofs
+	Sidechains/Drivechains
+	Homomorphic Encryption? 
+2. Networking to find new nodes
+3. Networking when sending found blocks to peers
+4. Dandelion 2.0?
+	When recieving new blocks, ask for two random transactions (by index) and their merkle proof
+5. Scripting language
+	Same as Script?
+	micropayments as an open channel on the blockchain:
+		Create payment channel from X -> Y (lock up N coins)
+		X gives Y a tuple: (tx, signature) where signature = sig(tx)
+		X can continue to give Y tuples up to N
+		Y can publish at any time and take the miner fee to do that
+		X can either leave it open or close the channel, Y will have 2 days to claim any coins before X can spend again
+		X pays for 2 transactions - open and
+	micropayments full on blockchain:
+		Create payment channel from X -> Y (lock up N coins) - tx = (X,Y,channel_id,N), channel = (tx,sig(tx))
+		X publishes (0 <= amount <= N, signature, channel_id) to blockchain
+			cheaper because it is smaller
+6. Test multiple nodes
+		some going offline - what if all nodes go offline?
+		some coming back online
+7. Verying incoming blocks
+	need to finish final cases
+8. SPV nodes
+9. Creating transactions
+10. Take out timestamp from transactions - why do we need them?
+11. Block size?
+12. Difficulty Adjustment
+13. sha = hash function randomly permutated from n hash functions, say n = 100? 
+14. SegWit
+15. UTXO node as well
