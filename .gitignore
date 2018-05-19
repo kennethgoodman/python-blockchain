@@ -1,0 +1,13 @@
+# don't need to include cached files
+__pycache__
+.pyc
+
+# don't need to include the actual block data
+blocks
+blocks/*
+
+# don't need logs
+logs
+*.out
+*.err
+*.log
